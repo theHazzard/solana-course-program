@@ -43,7 +43,7 @@ pub mod myepicproject {
         &ix,
         &[
             ctx.accounts.from.to_account_info(),
-            ctx.accounts.to.to_account_info(),
+            ctx.accounts.to.to_account_info()
         ],
     )
   }
@@ -74,7 +74,7 @@ pub struct SendSol<'info> {
     #[account(mut)]
     from: Signer<'info>,
     #[account(mut)]
-    to: UncheckedAccount<'info>,
+    to: Signer<'info>,
     system_program: Program<'info, System>,
 }
 
